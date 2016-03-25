@@ -10,6 +10,7 @@ module.exports = function(app) {
     function controller(moviesFetcher, $log) {
         var that = this;
         that.searchString = '';
+        // that.movieList = {};
         that.getMovies = function() {
             if (!that.searchString) {
                 $log.debug('give me something to search');

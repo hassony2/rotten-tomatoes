@@ -4,10 +4,8 @@
         <h1 class="title">Rotten Tomatoes</h1>
     </ion-header-bar>
     <ion-content>
-        <br>
-        <br>
         <div class="list">
-            <label class="item item-input">
+            <label class="item item-input"> <span class="input-label">Start typing </span>
                 <input type="text" placeholder="Bond, 2012, nolan,...." ng-model="
    moviesCtrl.searchString">
             </label>
@@ -15,7 +13,13 @@
             <label class="item item-input">
                 <button class="button button-block" ng-click="moviesCtrl.getMovies(searchString)">Search</button>
             </label>
-            {{searchString}}
         </div>
+
+        <ion-list>
+        <ion-item class="item-thumbnail-left" ng-repeat="movie in moviesCtrl.movieList">
+        <img ng-src={{movie.posters.thumbnail}}>
+        <h2>{{movie.title}}</h2>
+        </ion-item>
+        </ion-list>
     </ion-content>
 </ion-view>
