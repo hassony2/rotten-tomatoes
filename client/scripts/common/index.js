@@ -25,7 +25,9 @@ module.exports = function(namespace) {
         $urlRouterProvider.otherwise('/');
         $stateProvider.state('home', {
             url: '/',
-            template: require('./views/home.html')
+            template: require('./views/home.html'),
+            controller: fullname + '.moviesController as moviesCtrl'
+
         });
     };
     configRoutes.$inject = configRoutesDeps;

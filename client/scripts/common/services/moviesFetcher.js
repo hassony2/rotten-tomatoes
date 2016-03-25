@@ -3,15 +3,26 @@ var servicename = 'moviesFetcher';
 
 module.exports = function(app) {
 
-    var dependencies = [];
+    var dependencies = ['$http', '$log'];
 
-    function service() {
-        var add = function(a, b) {
-            return a + b;
+    function service($http, $log) {
+        var getMovies = function(searchString) {
+
+            var url = 'http://api.rottentomatoes.com/api/public/v1.0/movies.json?q=' + searchString;
+            return $http.jsonp(url, {
+                    params: {
+                        apikey: '7ue5rxaj9xn4mhbmsuexug54',
+                        callback: 'JSON_CALLBACK'
+                    }
+                })
+                .then(function(response) {
+                    return response.data.movies;
+                });
+
         };
 
         return {
-            add: add
+            getMovies: getMovies
         };
 
     }
