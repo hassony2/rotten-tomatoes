@@ -11,11 +11,12 @@ require('angular-animate');
 require('angular-sanitize');
 require('ionic');
 require('ionic-angular');
-// require('./ionic.io.bundle.min');
+require('./ionic.io.bundle.min');
 
 var app = angular.module(namespace, ['ionic',
-    // 'ionic.service.core',
+    'ionic.service.core',
     // inject:modules start
+    require('./common')(namespace).name
     // inject:modules end
 ]);
 

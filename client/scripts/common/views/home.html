@@ -1,0 +1,17 @@
+<ion-pane>
+    <ion-header-bar class='bar-positive'>
+        <h1 class="title">Rotten Tomatoes</h1>
+    </ion-header-bar>
+    <ion-content>
+        <div class="list">
+            <label class="item item-input">
+                <input type="text" placeholder="Bond, 2012, nolan,...." ng-model="moviesCtrl.searchString">
+            </label>
+
+            <label class="item item-input" >
+                <button class="button button-block" ng-click="moviesCtrl.movieListQuery()">Search</button>
+            </label>
+            {{moviesCtrl.searchString}}
+        </div>
+    </ion-content>
+</ion-pane>
