@@ -5,17 +5,21 @@ module.exports = function(app) {
     var fullname = app.name + '.' + controllername;
     /*jshint validthis: true */
 
-    var deps = [];
+    var deps = [app.name + '.moviesFetcher', '$log'];
 
-    function controller() {
-        var vm = this;
-        vm.controllername = fullname;
+    function controller(moviesFetcher, $log) {
+        var that = this;
+        that.searchString = '';
+        that.getMovies = function(string) {
 
-        var activate = function() {
-
+            moviesFetcher.getMovies('test').then(function(response) {
+                that.movieList = response;
+                $log.debug(response);
+            });
         };
-        activate();
     }
+    var activate = function() {};
+    activate();
 
     controller.$inject = deps;
     app.controller(fullname, controller);
