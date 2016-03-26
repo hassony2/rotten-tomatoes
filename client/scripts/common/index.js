@@ -23,12 +23,23 @@ module.exports = function(namespace) {
     var configRoutesDeps = ['$stateProvider', '$urlRouterProvider'];
     var configRoutes = function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/');
-        $stateProvider.state('home', {
-            url: '/',
-            template: require('./views/home.html'),
-            controller: fullname + '.moviesController as moviesCtrl'
+        $stateProvider
+            .state('main', {
+                url: '/main',
+                template: require('./views/main.html')
 
-        });
+            })
+            .state('home', {
+                url: '/',
+                template: require('./views/home.html'),
+                controller: fullname + '.moviesController as moviesCtrl'
+
+            })
+            .state('home.movie', {
+                url: 'movie/{movieId}',
+                template: require('./views/movieDescription.html')
+            });
+
     };
     configRoutes.$inject = configRoutesDeps;
     app.config(configRoutes);
