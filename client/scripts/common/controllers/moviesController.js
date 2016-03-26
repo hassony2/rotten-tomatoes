@@ -15,15 +15,13 @@ module.exports = function(app) {
             if (!that.searchString) {
                 $log.debug('give me something to search');
             } else {
-                moviesFetcher.getMovies(that.searchString).then(function(response) {
-                    that.movieList = response;
-                    $log.debug(response);
+                moviesFetcher.getMovies(that.searchString).then(function(data) {
+                    $log.debug('search string found', that, moviesFetcher);
+                    that.movieList = moviesFetcher.movieList.list;
                 });
             }
         };
     }
-    var activate = function() {};
-    activate();
 
     controller.$inject = deps;
     app.controller(fullname, controller);
