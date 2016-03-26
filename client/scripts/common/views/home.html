@@ -15,8 +15,8 @@
         </div>
         <ion-list>
         <ion-item class="item-thumbnail-left" ng-repeat="movie in moviesCtrl.movieList">
-        <img ui-sref='home.movie({movieId:movie.id})' ng-src={{movie.posters.thumbnail}}>
-        <h2>{{movie.title}} {{movie.id}} </h2>
+        <img ui-sref='home.movie({movieId:$index})' ng-src={{movie.posters.thumbnail}}>
+        <h2>{{movie.title}}</h2>
 
         </ion-item>
         </ion-list>
