@@ -1,24 +1,18 @@
-<ion-header-bar class='bar-assertive'>
-    <h1 class="title">Rotten Tomatoes</h1>
-</ion-header-bar>
-<ion-view>
-    <ion-content>
+<ion-view title="Rotten Tomatoes">
+<ion-content>
         <div class="list">
-            <label class="item item-input"> <span class="input-label">Start typing </span>
+            <label class="item item-input">
+                <span class="input-label">Start typing </span>
                 <input type="text" placeholder="Bond, 2012, nolan,...." ng-model="
    moviesCtrl.searchString">
             </label>
 
             <label class="item item-input">
-                <button class="button button-block" ng-click="moviesCtrl.getMovies(searchString)">Search</button>
+                <button class="button button-block" ng-click="moviesCtrl.getMovies(searchString)" ui-sref="home.movies">Search</button>
             </label>
         </div>
-        <ion-list>
-        <ion-item class="item-thumbnail-left" ng-repeat="movie in moviesCtrl.movieList">
-        <img ui-sref='home.movie({movieId:$index})' ng-src={{movie.posters.thumbnail}}>
-        <h2>{{movie.title}}</h2>
 
-        </ion-item>
-        </ion-list>
-    </ion-content>
+        <ion-nav-view>
+        </ion-nav-view>
+ </ion-content>
 </ion-view>
