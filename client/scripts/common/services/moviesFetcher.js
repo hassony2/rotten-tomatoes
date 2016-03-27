@@ -6,7 +6,7 @@ module.exports = function(app) {
     var dependencies = ['$http', '$log'];
 
     function service($http, $log) {
-        var movieList={};
+        var movieList = {};
         var getMovies = function(searchString) {
 
             var url = 'http://api.rottentomatoes.com/api/public/v1.0/movies.json?q=' + searchString;

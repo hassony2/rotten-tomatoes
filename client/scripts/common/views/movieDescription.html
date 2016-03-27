@@ -1,6 +1,13 @@
-<ion-view name="home.movie">
+
+<ion-view title="Movie Details">
     <ion-content>
-    	About this movie : 
-        {{param}} 
+        {{movieCtrl.movie.title}}
+
+        <ion-list ng-repeat="cast in movieCtrl.movie.abridged_cast">
+            <ion-item>
+                {{cast.name}}
+            </ion-item>
+        </ion-list>
+        <button class="button" ui-sref="movie({movieId:movieCtrl.getNext()})">Next</button>
     </ion-content>
 </ion-view>
