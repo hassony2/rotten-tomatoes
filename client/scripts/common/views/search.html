@@ -1,0 +1,22 @@
+<ion-view title="Rotten Tomatoes Search">
+<ion-content>
+    <div class="list">
+        <div class="item item-input-inset">
+            <label class="item-input-wrapper">
+                <input type="text" placeholder="Search movie" ng-model="vm.search">
+            </label>
+            <button class="button button-small" ng-click="vm.getMovies()">
+                Submit
+            </button>
+        </div>
+    </div>
+	
+    <ion-list>
+        <ion-item class="item item-avatar" ng-repeat="movie in vm.movies" ui-sref="details({movie: movie})">
+           <img ng-src="{{movie.posters.thumbnail}}">
+           <h2>{{movie.title}}</h2>
+           <p> {{movie.synopsis}} </p>
+        </ion-item>
+    </ion-list>
+</ion-content>
+</ion-view>

@@ -1,0 +1,29 @@
+<ion-view title="Details">
+<ion-header-bar>
+    <h1 class="title">{{vm.movie.title}}
+    </h1>
+</ion-header-bar>
+<ion-content>
+
+    <div class="list card">
+        <div class="item item-avatar">
+            <img ng-src="{{vm.movie.posters.thumbnail}}">
+            <h2>{{vm.movie.title}}</h2>
+        </div>
+
+        <div class="item item-body">
+            <img class="full-image" ng-src="{{vm.movie.posters.original}}">
+
+            <p>{{vm.movie.synopsis}}</p>
+        </div>
+
+    </div>
+    <ion-list>
+        <ion-item ng-repeat="review in vm.reviews" ui-sref="review({content: review})">
+            <h2>{{review.critic}}</h2>
+            <p>{{review.quote}}</p>
+
+        </ion-item>
+    </ion-list>
+</ion-content>
+</ion-view>
