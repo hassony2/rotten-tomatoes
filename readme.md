@@ -22,7 +22,7 @@ To launch the app in your browser :
 
 `gulp browsersync`
 
-Screenshots : 
+### Screenshots 
 
 ![main page](https://cloud.githubusercontent.com/assets/10189060/14078436/79b26534-f4fe-11e5-87c3-c074b727046e.png)
 
