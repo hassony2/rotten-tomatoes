@@ -1,23 +1,16 @@
-# rotten_tomatoes_4 
-[![NPM version](https://badge.fury.io/js/rotten_tomatoes_4.svg)](http://badge.fury.io/js/rotten_tomatoes_4) [![Downloads](http://img.shields.io/npm/dm/rotten_tomatoes_4.svg)](http://badge.fury.io/js/rotten_tomatoes_4)   
-[![Build Status](https://travis-ci.org//rotten_tomatoes_4.svg?branch=master)](https://travis-ci.org//rotten_tomatoes_4) [![Test Coverage](https://codeclimate.com/github//rotten_tomatoes_4/badges/coverage.svg)](https://codeclimate.com/github//rotten_tomatoes_4) [![Code Climate](https://codeclimate.com/github//rotten_tomatoes_4/badges/gpa.svg)](https://codeclimate.com/github//rotten_tomatoes_4)   
-[![Dependency Status](https://david-dm.org//rotten_tomatoes_4.svg)](https://david-dm.org//rotten_tomatoes_4) [![devDependency Status](https://david-dm.org//rotten_tomatoes_4/dev-status.svg)](https://david-dm.org//rotten_tomatoes_4#info=devDependencies) [![peerDependency Status](https://david-dm.org//rotten_tomatoes_4/peer-status.svg)](https://david-dm.org//rotten_tomatoes_4#info=peerDependencies)    
+# Rotten Tomato app
 
+## Little project using Ionic
 
-> 
+### Specs
 
-[![NPM](https://nodei.co/npm/rotten_tomatoes_4.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/rotten_tomatoes_4)
+First page should display a header with the title of the application, and underneath a search input box and a button for search.
 
-## Usage
+The user can input a few letters in the search box, and based on that, the app should issue a query to the rotten tomatoes api to get a list of movies which title contains the search.
 
+You should then display the result on the same page, using the ion-list component (list view). The item can be composed of the title of the movie, and a thumbnail picture.
 
-## Testing
+When clicking an a item in the list, you should be taken to a new page (ui-router state), that will display the summary of the selected movie, and underneath the list of reviews
 
-
-## Changelog
-
-Recent changes can be viewed on Github on the [Releases Page](https://github.com//rotten_tomatoes_4/releases)
-
-## License
 
 
