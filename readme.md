@@ -25,8 +25,7 @@ To launch the app in your browser :
 ### Screenshots 
 
 ![main page](https://cloud.githubusercontent.com/assets/10189060/14078436/79b26534-f4fe-11e5-87c3-c074b727046e.png)
-
-![movie page](https://cloud.githubusercontent.com/assets/10189060/14078514/0d6908aa-f4ff-11e5-924e-cee06e6b51ba.png)
+![movie page](https://cloud.githubusercontent.com/assets/10189060/14078536/50b39774-f4ff-11e5-8935-e8ccddaa3994.png)
 
 
 
