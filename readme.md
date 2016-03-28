@@ -12,5 +12,12 @@ You should then display the result on the same page, using the ion-list componen
 
 When clicking an a item in the list, you should be taken to a new page (ui-router state), that will display the summary of the selected movie, and underneath the list of reviews
 
+### Use 
 
+`git clone https://github.com/hassony2/rotten-tomatoes`
 
+`npm install`
+
+To launch the app in your browser : 
+
+`gulp browsersync`
