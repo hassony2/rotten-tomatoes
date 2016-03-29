@@ -153,7 +153,8 @@
           "presets": "es2015",
           "ignore": [
             "./node_modules",
-            "./bower_components"
+            "./bower_components",
+            "./client/scripts/ionic.io.bundle*.js"
           ]
         }
       ],
