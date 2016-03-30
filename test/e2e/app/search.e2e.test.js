@@ -31,7 +31,7 @@ describe('Search', function() {
         searchView.searchResult(searchKeys).click();
 
         expect(detailsView.image().isPresent()).toBe(true);
-        expect(detailsView.title().getText()).toEqual(searchKeys);
-    });
+        expect(detailsView.movieTitle().getText()).toEqual(searchKeys);
 
+    });
 });

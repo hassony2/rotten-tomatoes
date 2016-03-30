@@ -11,8 +11,12 @@ class DetailsView extends BaseView {
         return element(by.tagName('img'));
     }
 
-    title() {
-        return element(by.binding('vm.movie.title'));
+    movieTitle() {
+        return element.all(by.css('ion-header-bar')).all(by.binding('vm.movie.title')).first();
+
+    }
+    pageTitle() {
+        return $('ion-header-bar');
     }
 }
 
